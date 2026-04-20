@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ZenFocusApp: App {
@@ -13,5 +14,7 @@ struct ZenFocusApp: App {
         WindowGroup {
             ContentView()
         }
+        // Esto crea la base de datos automáticamente
+        .modelContainer(for: FocusSession.self)
     }
 }

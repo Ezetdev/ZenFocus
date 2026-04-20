@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		21D4A92B2F96329000046570 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D4A92A2F96329000046570 /* WidgetKit.framework */; };
+		21D4A92D2F96329000046570 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D4A92C2F96329000046570 /* SwiftUI.framework */; };
+		21D4A93A2F96329100046570 /* ZenFocusWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 21D4A9282F96329000046570 /* ZenFocusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21D4A9382F96329100046570 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 214F0CDC2F955C9D00FFC878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21D4A9272F96329000046570;
+			remoteInfo = ZenFocusWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21D4A93F2F96329100046570 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				21D4A93A2F96329100046570 /* ZenFocusWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		214F0CE42F955C9D00FFC878 /* ZenFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D4A9282F96329000046570 /* ZenFocusWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ZenFocusWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D4A92A2F96329000046570 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		21D4A92C2F96329000046570 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		21D4A93B2F96329100046570 /* Exceptions for "ZenFocusWidget" folder in "ZenFocusWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 21D4A9272F96329000046570 /* ZenFocusWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		214F0CE62F955C9D00FFC878 /* ZenFocus */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ZenFocus;
+			sourceTree = "<group>";
+		};
+		21D4A92E2F96329000046570 /* ZenFocusWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				21D4A93B2F96329100046570 /* Exceptions for "ZenFocusWidget" folder in "ZenFocusWidgetExtension" target */,
+			);
+			path = ZenFocusWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21D4A9252F96329000046570 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21D4A92D2F96329000046570 /* SwiftUI.framework in Frameworks */,
+				21D4A92B2F96329000046570 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				214F0CE62F955C9D00FFC878 /* ZenFocus */,
+				21D4A92E2F96329000046570 /* ZenFocusWidget */,
+				21D4A9292F96329000046570 /* Frameworks */,
 				214F0CE52F955C9D00FFC878 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				214F0CE42F955C9D00FFC878 /* ZenFocus.app */,
+				21D4A9282F96329000046570 /* ZenFocusWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		21D4A9292F96329000046570 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21D4A92A2F96329000046570 /* WidgetKit.framework */,
+				21D4A92C2F96329000046570 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				214F0CE02F955C9D00FFC878 /* Sources */,
 				214F0CE12F955C9D00FFC878 /* Frameworks */,
 				214F0CE22F955C9D00FFC878 /* Resources */,
+				21D4A93F2F96329100046570 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				21D4A9392F96329100046570 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				214F0CE62F955C9D00FFC878 /* ZenFocus */,
@@ -69,6 +143,28 @@
 			productName = ZenFocus;
 			productReference = 214F0CE42F955C9D00FFC878 /* ZenFocus.app */;
 			productType = "com.apple.product-type.application";
+		};
+		21D4A9272F96329000046570 /* ZenFocusWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21D4A93C2F96329100046570 /* Build configuration list for PBXNativeTarget "ZenFocusWidgetExtension" */;
+			buildPhases = (
+				21D4A9242F96329000046570 /* Sources */,
+				21D4A9252F96329000046570 /* Frameworks */,
+				21D4A9262F96329000046570 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				21D4A92E2F96329000046570 /* ZenFocusWidget */,
+			);
+			name = ZenFocusWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = ZenFocusWidgetExtension;
+			productReference = 21D4A9282F96329000046570 /* ZenFocusWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					214F0CE32F955C9D00FFC878 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					21D4A9272F96329000046570 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				214F0CE32F955C9D00FFC878 /* ZenFocus */,
+				21D4A9272F96329000046570 /* ZenFocusWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		214F0CE22F955C9D00FFC878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21D4A9262F96329000046570 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21D4A9242F96329000046570 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21D4A9392F96329100046570 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21D4A9272F96329000046570 /* ZenFocusWidgetExtension */;
+			targetProxy = 21D4A9382F96329100046570 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		214F0CED2F955C9D00FFC878 /* Debug */ = {
@@ -325,6 +447,71 @@
 			};
 			name = Release;
 		};
+		21D4A93D2F96329100046570 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UDUHAFSSJ4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZenFocusWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ZenFocusWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hz.ZenFocus.ZenFocusWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21D4A93E2F96329100046570 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UDUHAFSSJ4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZenFocusWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ZenFocusWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hz.ZenFocus.ZenFocusWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -342,6 +529,15 @@
 			buildConfigurations = (
 				214F0CF02F955C9D00FFC878 /* Debug */,
 				214F0CF12F955C9D00FFC878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21D4A93C2F96329100046570 /* Build configuration list for PBXNativeTarget "ZenFocusWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21D4A93D2F96329100046570 /* Debug */,
+				21D4A93E2F96329100046570 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
